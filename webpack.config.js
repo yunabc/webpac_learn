@@ -11,8 +11,9 @@ module.exports = {
 		new htmlWebpackPlugin({
 			template:'index.html',
 			filename:'index-[hash].html',
-			inject:'head' // script 标签的位置 
-
+			inject:'head', // script 标签的位置 
+			title:'this is test title',
+			date:new Date(),
 		})
 	]
 };

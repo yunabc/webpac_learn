@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>webpack_learn</title>
+	<title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-	<script type="text/javascript" src="dist/js/bundle.js"></script>
+	<%=htmlWebpackPlugin.options.date %>
+	<% for (var key in htmlWebpackPlugin.files) {%>
+		<%= key%>:<%= JSON.stringify(htmlWebpackPlugin.files[key])%>
+	<%}%>
+	<% for (var key in htmlWebpackPlugin.options) {%>
+		<%= key%>:<%= JSON.stringify(htmlWebpackPlugin.options[key])%>
+	<%}%>
 </body>
 </html>
